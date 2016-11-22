@@ -9,6 +9,6 @@ with Handler(sender_email, recipient_email, password) as h:
     h.send('Hello, world')
 """
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 from .handler import Handler
