@@ -47,7 +47,7 @@ class Handler:
             msg['Subject'] = subject
 
         # set message body
-        msg.attach(MIMEText(body, 'plain'))
+        msg.attach(MIMEText(body, 'html'))
 
         # attach content to message
         if attachments is not None:
