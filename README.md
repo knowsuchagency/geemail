@@ -8,9 +8,8 @@ A dead simple library to send emails using gmail in Python 3.
 
 ## Usage
 
-Handler is a context manager which will close itself which finished sending stuff.
+Handler is a context manager with only one method, **send**.
 
-It has only one method, send, with the following function signature:
 ```python
 send(self, body: str, subject: str = None, attachments: [str] = None)
 ```
@@ -20,7 +19,8 @@ send(self, body: str, subject: str = None, attachments: [str] = None)
 from geemail import Handler
 
 with Handler(sender_email, recipient_email, password) as h:
-    # the
     h.send('Hello, world')
+    h.send('help', subject="I've fallen and I can't get up")
+    h.send('Check out these cat pictures', attachments=['path/to/a/picture', 'or/two'])
 ```
 
